@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sílabo interactivo de Sistemas de Información para la Inteligencia de Negocios, UTC.">
+  <title>Sílabo interactivo | Sistemas de Información para BI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/theme.js"></script>
+</head>
+<body class="syllabus-page">
+  <!-- Navegación del proyecto y control persistente de tema. -->
+  <nav class="navbar navbar-expand-lg site-nav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="index.html"><span class="brand-symbol" aria-hidden="true">D</span> Datos que deciden</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#syllabusNavigation" aria-controls="syllabusNavigation" aria-expanded="false" aria-label="Abrir navegación"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="syllabusNavigation">
+        <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <a class="nav-link" href="index.html">Fundamentos de BI</a>
+          <a class="nav-link" href="dashboard.html">Dashboard Liga Pro</a>
+          <a class="nav-link active" aria-current="page" href="silabo.html">Sílabo</a>
+          <button class="btn btn-theme ms-lg-2" type="button" data-theme-toggle aria-label="Cambiar a tema oscuro" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Tema oscuro</span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Portada con datos del curso, código, créditos y acceso a la ruta gamificada. -->
+    <header class="syllabus-hero">
+      <div class="container syllabus-hero-inner">
+        <div class="syllabus-overline"><span class="live-mark" aria-hidden="true"></span> UTC · SEDE LATACUNGA <span class="overline-divider">/</span> PERÍODO 2026–2027</div>
+        <div class="row align-items-end g-4">
+          <div class="col-lg-8">
+            <p class="course-code">ISIS1805 <span>·</span> CICLO 8 <span>·</span> PARALELO A</p>
+            <h1>Sistemas de Información<br><span>para la Inteligencia de Negocios</span></h1>
+            <p class="syllabus-lede">Explora la asignatura como una ruta: completa unidades, suma puntos y consulta cada detalle cuando lo necesites.</p>
+            <a href="#ruta" class="btn syllabus-start">Iniciar recorrido <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="col-lg-4 syllabus-hero-aside">
+            <div class="hero-metric"><span>CRÉDITOS</span><strong>3.00</strong></div>
+            <div class="hero-metric"><span>HORAS TOTALES</span><strong>144 <small>h</small></strong></div>
+            <button class="course-detail-link" type="button" data-bs-toggle="modal" data-bs-target="#institutionModal">Universidad Técnica de Cotopaxi <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+        <div class="syllabus-ribbon" aria-hidden="true"><span>EXPLORAR</span><span>APRENDER</span><span>APLICAR</span><span>COMPARTIR</span></div>
+      </div>
+    </header>
+
+    <!-- Panel-resumen con insignias y botones que abren los datos en modales. -->
+    <section class="syllabus-overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="overview-heading"><div><p class="eyebrow">Panel de asignatura</p><h2 id="overview-title">Tu punto de partida</h2></div><span class="status-badge" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Asignatura correspondiente al ciclo 8, paralelo A."><span aria-hidden="true">●</span> ACTIVA · CICLO 8</span></div>
+        <div class="overview-panel">
+          <div class="overview-main">
+            <div class="overview-subject"><span class="subject-mark" aria-hidden="true">BI</span><div><span>ASIGNATURA</span><h3>Sistemas de Información para la Inteligencia de Negocios</h3><p>Código ISIS1805 <span>·</span> Sistemas de Información</p></div></div>
+            <div class="overview-badges"><span>Normal</span><span>Ciclo 8</span><span>Paralelo A</span><span>3.00 créditos</span></div>
+          </div>
+          <div class="overview-actions">
+            <button class="overview-action" type="button" data-bs-toggle="modal" data-bs-target="#institutionModal"><span class="action-index">01</span><span>Institución y carrera</span><span class="action-arrow" aria-hidden="true">↗</span></button>
+            <button class="overview-action" type="button" data-bs-toggle="modal" data-bs-target="#scheduleModal"><span class="action-index">02</span><span>Período y carga horaria</span><span class="action-arrow" aria-hidden="true">↗</span></button>
+            <button class="overview-action" type="button" data-bs-toggle="modal" data-bs-target="#teacherModal"><span class="action-index">03</span><span>Docente responsable</span><span class="action-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modales de consulta para los datos institucionales y académicos. -->
+    <div class="modal fade syllabus-modal" id="institutionModal" tabindex="-1" aria-labelledby="institutionModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><div><p class="modal-kicker">UNIVERSIDAD · FACULTAD</p><h2 class="modal-title" id="institutionModalTitle">Institución y carrera</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><dl class="detail-list"><div><dt>Institución</dt><dd>Universidad Técnica de Cotopaxi</dd></div><div><dt>Sede</dt><dd>Latacunga</dd></div><div><dt>Facultad</dt><dd>Ciencias de la Ingeniería y Aplicadas</dd></div><div><dt>Carrera</dt><dd>Sistemas de Información</dd></div><div><dt>Modalidad · ciclo · paralelo</dt><dd>Normal · Ciclo 8 · Paralelo A</dd></div></dl></div></div></div>
+    </div>
+    <div class="modal fade syllabus-modal" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><div><p class="modal-kicker">CALENDARIO · DEDICACIÓN</p><h2 class="modal-title" id="scheduleModalTitle">Período y carga horaria</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><p class="period-range"><time datetime="2026-10-12">12 oct 2026</time><span aria-hidden="true">→</span><time datetime="2027-02-21">21 feb 2027</time></p><div class="hour-breakdown"><div><span>DOCENCIA</span><strong>48 h</strong></div><div><span>PRÁCTICAS</span><strong>48 h</strong></div><div><span>AUTÓNOMAS</span><strong>48 h</strong></div><div class="hour-total"><span>TOTAL · 3.00 CRÉDITOS</span><strong>144 h</strong></div></div></div></div></div>
+    </div>
+    <div class="modal fade syllabus-modal" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><div><p class="modal-kicker">ACOMPAÑAMIENTO ACADÉMICO</p><h2 class="modal-title" id="teacherModalTitle">Docente responsable</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body teacher-modal-body"><span class="teacher-initials" aria-hidden="true">LQ</span><div><h3>Luis Rene Quisaguano Collaguazo</h3><a href="mailto:renequisaguano@gmail.com">renequisaguano@gmail.com</a><a href="mailto:luis.quisaguano1@utc.edu.ec">luis.quisaguano1@utc.edu.ec</a></div></div></div></div>
+    </div>
+
+    <!-- Pestañas para recorrer descripción, aporte y objetivo de la materia. -->
+    <section class="section-pad syllabus-section" aria-labelledby="course-structure-title">
+      <div class="container">
+        <div class="section-heading row align-items-end g-3"><div class="col-lg-7"><p class="eyebrow">La asignatura</p><h2 id="course-structure-title">Una mirada al propósito</h2></div><p class="col-lg-5 section-intro">Conecta los fundamentos de información con decisiones organizacionales concretas.</p></div>
+        <ul class="nav nav-tabs syllabus-tabs" id="courseTabs" role="tablist">
+          <li class="nav-item" role="presentation"><button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-pane" type="button" role="tab" aria-controls="description-pane" aria-selected="true"><span>01</span> Descripción</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-pane" type="button" role="tab" aria-controls="profile-pane" aria-selected="false"><span>02</span> Perfil de egreso</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" id="objective-tab" data-bs-toggle="tab" data-bs-target="#objective-pane" type="button" role="tab" aria-controls="objective-pane" aria-selected="false"><span>03</span> Objetivo general</button></li>
+        </ul>
+        <div class="tab-content syllabus-tab-content" id="courseTabsContent">
+          <div class="tab-pane fade show active" id="description-pane" role="tabpanel" aria-labelledby="description-tab" tabindex="0"><div class="tab-index">01 <span>/</span> CONTEXTO</div><div><h3>¿Qué vas a explorar?</h3><p>Análisis de conceptos, fundamentos, características y modelamiento de BI para apoyar la toma de decisiones empresariales. Reúne, almacena y analiza grandes volúmenes de datos mediante software especializado.</p></div><span class="tab-symbol" aria-hidden="true">↗</span></div>
+          <div class="tab-pane fade" id="profile-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><div class="tab-index">02 <span>/</span> PROYECCIÓN</div><div><h3>¿Cómo aporta a tu perfil?</h3><p>Construir procesos de extracción, combinación, depuración y distribución de información para tomar decisiones inteligentes.</p></div><span class="tab-symbol" aria-hidden="true">◎</span></div>
+          <div class="tab-pane fade" id="objective-pane" role="tabpanel" aria-labelledby="objective-tab" tabindex="0"><div class="tab-index">03 <span>/</span> PROPÓSITO</div><div><h3>¿Qué lograrás?</h3><p>Analizar fundamentos, características y modelamiento de BI para implementar estas herramientas en la organización y ejecutar correctamente sus etapas.</p></div><span class="tab-symbol" aria-hidden="true">↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ruta gamificada de unidades; cada botón suma puntos y guarda el avance. -->
+    <section class="section-pad learning-section" id="ruta" aria-labelledby="learning-title">
+      <div class="container">
+        <div class="section-heading row align-items-end g-3"><div class="col-lg-7"><p class="eyebrow">Ruta de aprendizaje · 3 unidades</p><h2 id="learning-title">Tu progreso, a tu ritmo</h2></div><p class="col-lg-5 section-intro">Explora los contenidos de cada etapa. Al completar una unidad ganas 100 puntos de aprendizaje.</p></div>
+        <div class="progress-console">
+          <div class="progress-console-top"><div><span class="console-label">PROGRESO DEL CURSO</span><strong id="courseProgressText">0 de 3 unidades</strong></div><div class="xp-counter"><span aria-hidden="true">✦</span> <strong id="courseXp">0</strong> XP</div></div>
+          <div class="progress syllabus-progress" role="progressbar" aria-label="Progreso de unidades" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><div class="progress-bar" id="courseProgressBar" style="width: 0%"></div></div>
+          <div class="progress-console-bottom"><span id="progressMessage" aria-live="polite">La primera unidad te espera.</span><button type="button" id="resetProgress" class="reset-progress" hidden>Reiniciar avance</button></div>
+        </div>
+        <div class="accordion unit-accordion" id="unitAccordion">
+          <article class="accordion-item unit-item" data-unit="0">
+            <h3 class="accordion-header" id="unitHeadingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#unitCollapseOne" aria-expanded="true" aria-controls="unitCollapseOne"><span class="unit-number">01</span><span class="unit-heading-text"><strong>Fundamentos y Gestión de la Inteligencia de Negocios</strong><small>Aprendizaje Cooperativo</small></span><span class="unit-status" aria-hidden="true">+</span></button></h3>
+            <div id="unitCollapseOne" class="accordion-collapse collapse show" aria-labelledby="unitHeadingOne" data-bs-parent="#unitAccordion"><div class="accordion-body"><p class="unit-prompt">Comprende cómo los sistemas de información generan valor y qué herramientas permiten convertir datos en conocimiento.</p><div class="topic-grid"><span>Conceptos básicos</span><span>Componentes de BI</span><span>Sistemas de información y generación de valor</span><span>Herramientas de BI</span></div><button type="button" class="unit-complete" data-complete-unit="0"><span aria-hidden="true">✓</span> Marcar unidad como completada</button></div></div>
+          </article>
+          <article class="accordion-item unit-item" data-unit="1">
+            <h3 class="accordion-header" id="unitHeadingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unitCollapseTwo" aria-expanded="false" aria-controls="unitCollapseTwo"><span class="unit-number">02</span><span class="unit-heading-text"><strong>Sistemas de Soporte a la Administración y Data Warehouse</strong><small>Aprendizaje Basado en Problemas</small></span><span class="unit-status" aria-hidden="true">+</span></button></h3>
+            <div id="unitCollapseTwo" class="accordion-collapse collapse" aria-labelledby="unitHeadingTwo" data-bs-parent="#unitAccordion"><div class="accordion-body"><p class="unit-prompt">Investiga cómo medir, almacenar y visualizar información para resolver preguntas de gestión.</p><div class="topic-grid"><span>Variables de medición</span><span>Data Warehouse</span><span>Gestión del conocimiento</span><span>Patrones: evaluación, interpretación y visualización</span></div><button type="button" class="unit-complete" data-complete-unit="1"><span aria-hidden="true">✓</span> Marcar unidad como completada</button></div></div>
+          </article>
+          <article class="accordion-item unit-item" data-unit="2">
+            <h3 class="accordion-header" id="unitHeadingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unitCollapseThree" aria-expanded="false" aria-controls="unitCollapseThree"><span class="unit-number">03</span><span class="unit-heading-text"><strong>Sistema de Soporte para Toma de Decisiones Empresariales</strong><small>Aprendizaje Basado en Proyectos</small></span><span class="unit-status" aria-hidden="true">+</span></button></h3>
+            <div id="unitCollapseThree" class="accordion-collapse collapse" aria-labelledby="unitHeadingThree" data-bs-parent="#unitAccordion"><div class="accordion-body"><p class="unit-prompt">Integra modelamiento, procesos y presentación de información en una solución orientada a decisiones.</p><div class="topic-grid"><span>Vistas multidimensionales (hipercubos)</span><span>Procesos ETL</span><span>Reporteadores</span><span>Alertas</span><span>Dashboards y KPI's</span><span>Aspectos técnicos del proyecto</span></div><button type="button" class="unit-complete" data-complete-unit="2"><span aria-hidden="true">✓</span> Marcar unidad como completada</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarjetas reversibles, activables también con teclado y toque. -->
+    <section class="section-pad skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading row align-items-end g-3"><div class="col-lg-7"><p class="eyebrow">Más allá de la herramienta</p><h2 id="skills-title">Habilidades para trabajar con datos</h2></div><div class="col-lg-5 d-flex justify-content-lg-end"><button type="button" class="skill-hint" data-bs-toggle="popover" data-bs-title="Una habilidad se entrena" data-bs-content="Explora cada tarjeta para ver cómo se aplica esta competencia en proyectos de inteligencia de negocios.">¿Cómo explorar estas tarjetas? <span aria-hidden="true">ⓘ</span></button></div></div>
+        <div class="row g-3 skill-grid">
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">01</span><span class="skill-icon" aria-hidden="true">⌘</span><strong>Competencia digital</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">01 / APLICACIÓN</span><strong>Procesamiento crítico y uso eficaz de recursos digitales.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">02</span><span class="skill-icon" aria-hidden="true">✳</span><strong>Creatividad</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">02 / APLICACIÓN</span><strong>Proponer ideas innovadoras y soluciones de BI originales.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">03</span><span class="skill-icon" aria-hidden="true">◇</span><strong>Ética</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">03 / APLICACIÓN</span><strong>Manejo responsable y sin sesgos de datos sensibles.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">04</span><span class="skill-icon" aria-hidden="true">↗</span><strong>Liderazgo</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">04 / APLICACIÓN</span><strong>Liderar construcción de soluciones BI y coordinar equipos.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">05</span><span class="skill-icon" aria-hidden="true">⌕</span><strong>Pensamiento crítico</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">05 / APLICACIÓN</span><strong>Evaluar calidad de datos y cuestionar validez de indicadores.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+          <div class="col-6 col-lg-4"><button type="button" class="skill-card" aria-pressed="false"><span class="skill-card-inner"><span class="skill-face skill-front"><span class="skill-index">06</span><span class="skill-icon" aria-hidden="true">⌁</span><strong>Resolución de problemas</strong><small>TOCA PARA EXPLORAR</small></span><span class="skill-face skill-back"><span class="skill-index">06 / APLICACIÓN</span><strong>Usar procesos ETL para responder a necesidades concretas.</strong><span class="skill-back-action">Volver <span aria-hidden="true">↻</span></span></span></span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fechas de evaluación dispuestas como una línea de tiempo. -->
+    <section class="section-pad timeline-section" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-heading row align-items-end g-3"><div class="col-lg-7"><p class="eyebrow">Agenda académica</p><h2 id="timeline-title">Fechas para tener en el radar</h2></div><p class="col-lg-5 section-intro">Tres hitos de evaluación distribuidos a lo largo del período.</p></div>
+        <ol class="evaluation-timeline">
+          <li class="timeline-item"><span class="timeline-node" aria-hidden="true"></span><span class="timeline-label">EVALUACIÓN 01</span><strong>EVAL1</strong><time datetime="2026-11-22">22 nov 2026</time><span class="timeline-sequence">01 <span>/ 03</span></span></li>
+          <li class="timeline-item"><span class="timeline-node" aria-hidden="true"></span><span class="timeline-label">EVALUACIÓN 02</span><strong>EVAL2</strong><time datetime="2027-01-10">10 ene 2027</time><span class="timeline-sequence">02 <span>/ 03</span></span></li>
+          <li class="timeline-item"><span class="timeline-node" aria-hidden="true"></span><span class="timeline-label">EVALUACIÓN 03</span><strong>EVAL3</strong><time datetime="2027-02-14">14 feb 2027</time><span class="timeline-sequence">03 <span>/ 03</span></span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Acceso al proyecto articulador mediante panel lateral de Bootstrap. -->
+    <section class="project-band" aria-labelledby="project-title">
+      <div class="container project-band-inner"><div><p class="eyebrow">Aprendizaje con impacto</p><h2 id="project-title">Los datos también cuidan ecosistemas.</h2><p>Conoce el proyecto articulador y su conexión entre información satelital y decisiones ambientales.</p></div><button class="btn project-open" type="button" data-bs-toggle="offcanvas" data-bs-target="#projectOffcanvas" aria-controls="projectOffcanvas">Explorar PlasTrack <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <div class="offcanvas offcanvas-end project-offcanvas" tabindex="-1" id="projectOffcanvas" aria-labelledby="projectOffcanvasTitle">
+      <div class="offcanvas-header"><div><p class="modal-kicker">PROYECTO ARTICULADOR</p><h2 class="offcanvas-title" id="projectOffcanvasTitle">PlasTrack</h2></div><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar panel"></button></div>
+      <div class="offcanvas-body"><span class="project-tag">COPERNICUS · ECOSISTEMAS INSULARES</span><h3>Monitoreo Inteligente de Microplásticos mediante Datos Copernicus para la Conservación de Ecosistemas Insulares “PlasTrack”.</h3><p class="project-offcanvas-label">APORTE A LA ASIGNATURA</p><p>Transforma datos satelitales en información estratégica. Diseño de dashboards y alertas para el sector pesquero y gestores ambientales.</p><div class="project-flow"><span>Datos satelitales</span><b aria-hidden="true">→</b><span>Dashboards y alertas</span><b aria-hidden="true">→</b><span>Acción ambiental</span></div><button class="btn btn-project-close" type="button" data-bs-dismiss="offcanvas">Volver a la ruta</button></div>
+    </div>
+
+    <!-- Biblioteca con referencias básicas y accesos directos a documentación web. -->
+    <section class="section-pad resources-section" aria-labelledby="resources-title">
+      <div class="container">
+        <div class="section-heading row align-items-end g-3"><div class="col-lg-7"><p class="eyebrow">Para seguir investigando</p><h2 id="resources-title">Biblioteca de consulta</h2></div><p class="col-lg-5 section-intro">Referencias básicas y documentación para ampliar cada tema del curso.</p></div>
+        <div class="resource-groups row g-4">
+          <div class="col-lg-6"><h3 class="resource-group-title">Bibliografía básica <span>04 REFERENCIAS</span></h3><div class="resource-grid">
+            <a class="resource-link" href="https://www.google.com/search?q=%C2%BFC%C3%B3mo+planificar+un+proyecto+de+BI%3F" target="_blank" rel="noopener noreferrer"><span class="resource-type">LECTURA</span><strong>¿Cómo planificar un proyecto de BI?</strong><span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="https://www.google.com/search?q=base+de+datos+fundamentos" target="_blank" rel="noopener noreferrer"><span class="resource-type">LECTURA</span><strong>Base de datos</strong><span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="https://www.google.com/search?q=la+toma+de+decisiones+en+la+pr%C3%A1ctica" target="_blank" rel="noopener noreferrer"><span class="resource-type">LECTURA</span><strong>La toma de decisiones en la práctica</strong><span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="https://www.google.com/search?q=Excel+y+Power+BI+an%C3%A1lisis+de+datos" target="_blank" rel="noopener noreferrer"><span class="resource-type">LECTURA</span><strong>Excel y Power BI</strong><span aria-hidden="true">↗</span></a>
+          </div></div>
+          <div class="col-lg-6"><h3 class="resource-group-title">Enlaces de interés <span>03 SITIOS</span></h3><div class="resource-grid">
+            <a class="resource-link" href="https://learn.microsoft.com/es-es/power-bi/" target="_blank" rel="noopener noreferrer"><span class="resource-type">DOCUMENTACIÓN OFICIAL</span><strong>Documentación oficial de Power BI</strong><span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="https://developer.mozilla.org/es/docs/Learn_web_development" target="_blank" rel="noopener noreferrer"><span class="resource-type">DESARROLLO WEB</span><strong>Aplicación de tecnologías web</strong><span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="https://www.chartjs.org/docs/latest/" target="_blank" rel="noopener noreferrer"><span class="resource-type">VISUALIZACIÓN</span><strong>Chart.js</strong><span aria-hidden="true">↗</span></a>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarjeta de presentación del docente con formación y experiencia. -->
+    <section class="section-pad instructor-section" aria-labelledby="instructor-title">
+      <div class="container">
+        <div class="instructor-glass">
+          <div class="instructor-identity"><span class="instructor-avatar" aria-hidden="true">LQ</span><p class="eyebrow">Perfil docente</p><h2 id="instructor-title">Luis Rene Quisaguano Collaguazo</h2><p>Docente · Universidad Técnica de Cotopaxi</p><div class="instructor-contact"><a href="mailto:renequisaguano@gmail.com">renequisaguano@gmail.com</a><a href="mailto:luis.quisaguano1@utc.edu.ec">luis.quisaguano1@utc.edu.ec</a></div></div>
+          <div class="instructor-credentials"><div class="credential-block"><h3>Formación</h3><p><strong>Cuarto nivel</strong>Magister en Sistemas de Información</p><p><strong>Tercer nivel</strong>Ingeniero en Informática y Sistemas</p></div><div class="credential-block"><h3>Experiencia</h3><div class="experience-tags"><span>Docente <small>UTC</small></span><span>Analista TI <small>GAD Mejía</small></span><span>Desarrollador <small>Evolution Soft</small></span><span>Gerente <small>Rebian Software</small></span></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie con navegación de retorno a las otras páginas del proyecto. -->
+  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between gap-2"><span>Universidad Técnica de Cotopaxi <span class="footer-separator">/</span> ISIS1805</span><span class="footer-links"><a href="index.html">Fundamentos de BI</a><a href="dashboard.html">Dashboard Liga Pro</a></span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/silabo.js"></script>
+</body>
+</html>
