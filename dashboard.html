@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard interactivo con estadísticas ficticias de Liga Pro Ecuador 2026.">
+  <title>Dashboard Liga Pro 2026 | Datos que deciden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+  <!-- Navegación común entre el contenido educativo y el dashboard. -->
+  <nav class="navbar navbar-expand-lg site-nav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="index.html"><span class="brand-symbol" aria-hidden="true">D</span> Datos que deciden</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <a class="nav-link" href="index.html">Fundamentos de BI</a>
+          <a class="nav-link nav-cta active" aria-current="page" href="dashboard.html">Dashboard Liga Pro <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-main">
+    <!-- Encabezado y periodo del análisis deportivo. -->
+    <section class="dashboard-header">
+      <div class="container">
+        <div class="dashboard-topline">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Centro de análisis <span class="topline-divider">/</span> Fútbol ecuatoriano</p>
+          <span class="data-badge"><span aria-hidden="true">●</span> DATOS FICTICIOS</span>
+        </div>
+        <div class="row align-items-end g-4">
+          <div class="col-lg-8">
+            <p class="dashboard-kicker">LIGA PRO <span>2026</span></p>
+            <h1>La etapa, en perspectiva.</h1>
+            <p class="dashboard-subtitle">Una lectura rápida de la tabla, la producción ofensiva y las probabilidades de campeonato.</p>
+          </div>
+          <div class="col-lg-4 dashboard-period">
+            <span>TORNEO</span>
+            <strong>Primera etapa <span aria-hidden="true">⌄</span></strong>
+            <small>Corte: Fecha 10 de 15</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Indicadores principales resumen el estado ficticio de la tabla. -->
+    <section class="dashboard-content section-pad pt-4">
+      <div class="container">
+        <div class="row g-3 kpi-row">
+          <div class="col-6 col-lg-3">
+            <article class="kpi-block">
+              <span class="kpi-label">LÍDER ACTUAL</span>
+              <strong class="kpi-value">Ind. del Valle</strong>
+              <span class="kpi-note"><span class="trend-up">↑</span> 22 puntos</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="kpi-block">
+              <span class="kpi-label">GOLES DEL LÍDER</span>
+              <strong class="kpi-value">18 <small>GF</small></strong>
+              <span class="kpi-note">en 10 fechas</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="kpi-block">
+              <span class="kpi-label">MEJOR ATAQUE</span>
+              <strong class="kpi-value">Barcelona SC</strong>
+              <span class="kpi-note">20 goles a favor</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="kpi-block">
+              <span class="kpi-label">FECHA DE CORTE</span>
+              <strong class="kpi-value">10 <small>/ 15</small></strong>
+              <span class="kpi-note">5 fechas restantes</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Los tres canvas se alimentan del conjunto JSON de dashboard.js. -->
+        <div class="row g-3 charts-grid">
+          <div class="col-lg-7">
+            <section class="chart-panel chart-panel-large" aria-labelledby="points-title">
+              <div class="chart-heading">
+                <div>
+                  <p class="chart-overline">POSICIONES · FECHA 10</p>
+                  <h2 id="points-title">Los cinco de arriba</h2>
+                </div>
+                <span class="chart-unit">PUNTOS</span>
+              </div>
+              <div class="chart-canvas-wrap chart-bar-wrap">
+                <canvas id="pointsChart" role="img" aria-label="Gráfica de barras que compara los puntos de los cinco equipos líderes"></canvas>
+              </div>
+              <p class="chart-footnote">La ventaja del líder es de 3 puntos sobre su perseguidor inmediato.</p>
+            </section>
+          </div>
+          <div class="col-lg-5">
+            <section class="chart-panel chart-panel-large" aria-labelledby="goals-title">
+              <div class="chart-heading">
+                <div>
+                  <p class="chart-overline">PRODUCCIÓN OFENSIVA</p>
+                  <h2 id="goals-title">Goles por fecha</h2>
+                </div>
+                <span class="chart-unit">IDV · GF</span>
+              </div>
+              <div class="chart-canvas-wrap chart-line-wrap">
+                <canvas id="goalsChart" role="img" aria-label="Gráfica lineal de goles de Independiente del Valle en las últimas cinco fechas"></canvas>
+              </div>
+              <p class="chart-footnote">Independiente del Valle · últimas cinco fechas.</p>
+            </section>
+          </div>
+          <div class="col-12">
+            <section class="chart-panel probability-panel" aria-labelledby="probability-title">
+              <div class="chart-heading">
+                <div>
+                  <p class="chart-overline">PROYECCIÓN · MODELO SIMULADO</p>
+                  <h2 id="probability-title">¿Quién se queda con la etapa?</h2>
+                </div>
+                <span class="chart-unit">PROBABILIDAD ESTIMADA</span>
+              </div>
+              <div class="row align-items-center g-4 probability-content">
+                <div class="col-md-5 col-lg-4">
+                  <div class="chart-canvas-wrap chart-doughnut-wrap">
+                    <canvas id="probabilityChart" role="img" aria-label="Gráfica de dona de probabilidades estimadas de ganar la primera etapa"></canvas>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                  <div id="probabilityLegend" class="probability-legend" aria-label="Detalle de probabilidades"></div>
+                  <p class="chart-footnote mt-3">Estimaciones ilustrativas; no representan resultados oficiales ni predicciones verificadas.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <p class="dashboard-disclaimer">Visualización educativa con datos generados para este ejemplo. Liga Pro 2026 es una temporada ficticia.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página y scripts CDN/locales de la visualización. -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>Datos que deciden <span class="footer-separator">/</span> Liga Pro 2026</span>
+      <a href="index.html">Volver a fundamentos <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

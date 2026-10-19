@@ -1,0 +1,190 @@
+:root {
+  --ink: #17231f;
+  --muted: #69746e;
+  --paper: #fffdf8;
+  --surface: #f3f3ed;
+  --line: #dfe3dc;
+  --green: #126b55;
+  --green-dark: #0d5141;
+  --red: #d9432f;
+  --gold: #e0a33a;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.65; }
+h1, h2, h3, .navbar-brand { font-family: var(--font-display); }
+
+/* Navegación común y firma visual del sitio. */
+.site-nav { min-height: 72px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.brand-mark { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px; font-weight: 800; }
+.brand-mark:hover { color: var(--green); }
+.brand-symbol { display: inline-grid; width: 29px; height: 29px; place-items: center; background: var(--green); color: white; font-family: var(--font-display); font-size: 15px; font-weight: 800; }
+.site-nav .nav-link { padding: 10px 13px; color: var(--muted); font-size: 13px; font-weight: 600; }
+.site-nav .nav-link:hover, .site-nav .nav-link.active { color: var(--ink); }
+.site-nav .nav-cta { color: var(--green); }
+.site-nav .nav-cta span { margin-left: 5px; }
+
+/* Banda editorial de apertura y sus elementos de orientación. */
+.hero-band { position: relative; overflow: hidden; padding: 88px 0 64px; background-color: #17231f; background-image: linear-gradient(115deg, rgba(23,35,31,.98) 10%, rgba(23,35,31,.92) 60%, rgba(18,107,85,.72)), repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.045) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.045) 40px); color: var(--paper); }
+.hero-content { position: relative; z-index: 1; }
+.eyebrow { margin: 0 0 18px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+.hero-band .eyebrow, .dashboard-header .eyebrow, .quiz-shell .eyebrow { color: #b9d1c6; }
+.eyebrow-dot { display: inline-block; width: 7px; height: 7px; margin: 0 8px 1px 0; border-radius: 50%; background: var(--gold); }
+.hero-band h1 { max-width: 800px; margin: 0; font-size: 72px; font-weight: 800; line-height: 1.06; }
+.hero-band h1 span { color: #c3d6c8; }
+.hero-copy { max-width: 590px; margin: 23px 0 0; color: #d2d9d2; font-size: 17px; }
+.hero-aside { padding: 12px 8px 5px 30px; border-left: 1px solid rgba(255,255,255,.24); }
+.hero-index { color: var(--gold); font-size: 11px; font-weight: 700; }
+.hero-aside p { max-width: 250px; margin: 12px 0; color: #d2d9d2; font-size: 13px; }
+.text-link { color: var(--paper); font-size: 13px; font-weight: 700; text-decoration: none; }
+.text-link:hover { color: #c3d6c8; }
+.text-link span { margin-left: 6px; }
+.hero-ruler { display: flex; justify-content: space-between; max-width: 550px; margin: 62px auto 0; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); color: #b9c5bd; font-size: 9px; font-weight: 700; letter-spacing: 0; }
+
+/* Secciones teóricas, tarjetas y acordeón de Bootstrap. */
+.section-pad { padding: 76px 0; }
+.section-tint { background: var(--surface); }
+.section-heading { margin-bottom: 30px; }
+.section-heading h2, .section-tint h2 { max-width: 620px; margin: 0; font-size: 42px; font-weight: 800; line-height: 1.15; }
+.section-intro { margin-bottom: 2px; color: var(--muted); font-size: 14px; }
+.concept-card { height: 100%; min-height: 205px; padding: 24px; border: 1px solid var(--line); background: white; }
+.concept-card-accent { border-color: #d7e3d9; background: #eaf1eb; }
+.concept-number { color: var(--green); font-size: 11px; font-weight: 700; }
+.concept-card h3 { margin: 27px 0 9px; font-size: 21px; font-weight: 800; }
+.concept-card p { max-width: 300px; margin: 0; color: var(--muted); font-size: 13px; }
+.bi-accordion { border-top: 1px solid #cfd5cd; }
+.bi-accordion .accordion-item { border: 0; border-bottom: 1px solid #cfd5cd; background: transparent; }
+.bi-accordion .accordion-button { gap: 16px; padding: 23px 4px; background: transparent; box-shadow: none; color: var(--ink); font-family: var(--font-display); font-size: 17px; font-weight: 700; }
+.bi-accordion .accordion-button:not(.collapsed) { color: var(--green-dark); }
+.bi-accordion .accordion-button::after { width: 15px; height: 15px; background-size: 15px; }
+.accordion-number { color: var(--green); font-family: var(--font-body); font-size: 11px; }
+.bi-accordion .accordion-body { padding: 0 35px 25px; color: #59645e; font-size: 14px; }
+.etl-list { padding-left: 20px; }
+.etl-list li { margin-top: 8px; }
+.etl-list strong { color: var(--ink); }
+.example-card { height: 100%; padding: 25px; border: 1px solid var(--line); background: white; }
+.example-card-green { border-color: #d7e3d9; background: #eaf1eb; }
+.example-topline { display: flex; justify-content: space-between; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 0; }
+.example-topline span:last-child { color: var(--muted); font-size: 16px; }
+.example-card h3 { margin: 32px 0 12px; font-size: 22px; font-weight: 800; }
+.example-card p { min-height: 75px; color: var(--muted); font-size: 13px; }
+.example-result { display: flex; align-items: center; gap: 9px; padding-top: 15px; border-top: 1px solid rgba(23,35,31,.12); color: var(--ink); font-size: 12px; font-weight: 600; }
+.result-mark { display: inline-grid; width: 20px; height: 20px; place-items: center; background: var(--green); color: white; font-size: 11px; }
+
+/* Cuestionario accesible, con estados visuales diferenciados. */
+.quiz-section { padding: 72px 0; background: #17231f; }
+.quiz-shell { max-width: 900px; margin: 0 auto; }
+.quiz-shell h2 { max-width: 650px; margin: 0; color: var(--paper); font-size: 40px; font-weight: 800; line-height: 1.17; }
+.quiz-points { margin-bottom: 4px; color: #c4cec7; font-size: 12px; }
+.quiz-points span { color: var(--gold); font-family: var(--font-display); font-size: 23px; font-weight: 800; }
+.quiz-progress-wrap { margin: 34px 0 32px; }
+.quiz-progress-label { margin-bottom: 9px; color: #c4cec7; font-size: 11px; }
+.quiz-progress-label span:last-child { color: var(--paper); font-weight: 700; }
+.quiz-progress-wrap .progress { height: 4px; border-radius: 0; background: #39443e; }
+.quiz-progress-wrap .progress-bar { background: var(--gold); transition: width .35s ease; }
+.quiz-question { margin: 0; padding: 0; border: 0; }
+.quiz-question legend { float: none; width: auto; margin-bottom: 18px; color: var(--paper); font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.question-number { display: inline-block; margin-right: 11px; color: var(--gold); font-family: var(--font-body); font-size: 11px; }
+.answer-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.answer-option { min-height: 72px; padding: 13px 15px; border: 1px solid #4a5750; border-radius: 0; background: #202d27; color: #e8ece8; text-align: left; font: inherit; font-size: 12px; transition: background-color .18s ease, border-color .18s ease; }
+.answer-option:hover:not(:disabled) { border-color: #a9c4b5; background: #2b3b33; }
+.answer-option:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.answer-option:disabled { cursor: default; opacity: .72; }
+.answer-option.answer-correct { border-color: #65b88b; background: #174c39; color: #e8fff1; opacity: 1; }
+.answer-option.answer-incorrect { border-color: #e17868; background: #602f2a; color: #fff1ef; opacity: 1; }
+.answer-feedback { min-height: 25px; margin: 11px 0 2px; font-size: 12px; }
+.feedback-correct { color: #8cdaa9; }
+.feedback-incorrect { color: #ff9e8e; }
+.quiz-footer { margin-top: 27px; padding-top: 19px; border-top: 1px solid #39443e; }
+.quiz-result { color: #c4cec7; font-size: 13px; }
+.quiz-result-complete { color: var(--paper); font-weight: 700; }
+.btn-quiz { border: 1px solid #a9c4b5; border-radius: 0; color: var(--paper); font-size: 12px; font-weight: 700; }
+.btn-quiz:hover { border-color: var(--paper); background: var(--paper); color: var(--ink); }
+.btn-quiz span { margin-left: 6px; }
+.site-footer { padding: 22px 0; border-top: 1px solid var(--line); background: var(--paper); color: var(--muted); font-size: 11px; }
+.site-footer a { color: var(--green); font-weight: 700; text-decoration: none; }
+.site-footer a:hover { color: var(--green-dark); }
+.footer-separator { padding: 0 5px; color: var(--gold); }
+
+/* Estilos específicos del panel de análisis deportivo. */
+.dashboard-page { background: #f4f4ef; }
+.dashboard-header { padding: 38px 0 43px; background-color: #17231f; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.035) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.035) 40px); color: var(--paper); }
+.dashboard-topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.dashboard-header .eyebrow { margin: 0; }
+.topline-divider { margin: 0 8px; color: #68766e; }
+.data-badge { padding: 5px 8px; border: 1px solid rgba(224,163,58,.55); color: #f0c36e; font-size: 9px; font-weight: 700; letter-spacing: 0; white-space: nowrap; }
+.data-badge span { margin-right: 5px; font-size: 7px; }
+.dashboard-kicker { margin: 0 0 6px; color: #b9d1c6; font-size: 11px; font-weight: 700; letter-spacing: 0; }
+.dashboard-kicker span { margin-left: 5px; color: var(--gold); }
+.dashboard-header h1 { margin: 0; font-size: 50px; font-weight: 800; line-height: 1.1; }
+.dashboard-subtitle { max-width: 580px; margin: 13px 0 0; color: #c4cec7; font-size: 14px; }
+.dashboard-period { padding-left: 25px; border-left: 1px solid #435149; }
+.dashboard-period span, .dashboard-period small { display: block; color: #aab8af; font-size: 10px; }
+.dashboard-period strong { display: block; margin: 4px 0; color: var(--paper); font-family: var(--font-display); font-size: 15px; }
+.dashboard-period strong span { display: inline; margin-left: 6px; color: var(--gold); font-size: 14px; }
+.dashboard-content { padding-top: 28px; padding-bottom: 50px; }
+.kpi-row { margin-bottom: 18px; }
+.kpi-block { min-height: 120px; padding: 17px 18px; border-top: 2px solid var(--green); background: white; }
+.kpi-label { display: block; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 0; }
+.kpi-value { display: block; margin-top: 12px; color: var(--ink); font-family: var(--font-display); font-size: 21px; font-weight: 800; line-height: 1.15; }
+.kpi-value small { color: var(--muted); font-family: var(--font-body); font-size: 12px; font-weight: 600; }
+.kpi-note { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; }
+.trend-up { color: var(--green); font-weight: 700; }
+.charts-grid { --bs-gutter-y: 14px; }
+.chart-panel { height: 100%; padding: 20px; background: white; }
+.chart-panel-large { min-height: 350px; }
+.chart-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.chart-overline { margin: 0 0 5px; color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: 0; }
+.chart-heading h2 { margin: 0; font-size: 19px; font-weight: 800; }
+.chart-unit { padding-top: 4px; color: var(--muted); font-size: 9px; font-weight: 700; white-space: nowrap; }
+.chart-canvas-wrap { position: relative; width: 100%; }
+.chart-bar-wrap, .chart-line-wrap { height: 235px; margin-top: 17px; }
+.chart-footnote { margin: 12px 0 0; color: var(--muted); font-size: 10px; }
+.probability-panel { min-height: 285px; }
+.probability-content { margin-top: 5px; }
+.chart-doughnut-wrap { width: min(100%, 215px); height: 190px; margin: 0 auto; }
+.probability-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.legend-item { display: flex; align-items: center; gap: 9px; min-width: 0; padding: 10px 0; border-bottom: 1px solid #edf0ea; }
+.legend-swatch { flex: 0 0 9px; width: 9px; height: 9px; background: var(--swatch-color); }
+.legend-team { overflow: hidden; flex: 1; color: #56615b; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.legend-item strong { color: var(--ink); font-family: var(--font-display); font-size: 13px; }
+.dashboard-disclaimer { margin: 17px 0 0; color: var(--muted); font-size: 10px; text-align: right; }
+
+@media (max-width: 767.98px) {
+  .hero-band { padding: 60px 0 42px; }
+  .hero-band h1 { font-size: 42px; }
+  .hero-copy { font-size: 15px; }
+  .hero-aside { padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,.24); border-left: 0; }
+  .hero-aside p { max-width: 380px; }
+  .hero-ruler { margin-top: 42px; }
+  .section-pad { padding: 55px 0; }
+  .section-heading h2, .section-tint h2 { font-size: 32px; }
+  .concept-card { min-height: 180px; }
+  .concept-card h3 { margin-top: 20px; }
+  .bi-accordion .accordion-button { align-items: flex-start; font-size: 15px; }
+  .bi-accordion .accordion-button::after { flex: 0 0 15px; margin-top: 4px; }
+  .bi-accordion .accordion-body { padding-left: 29px; }
+  .example-card p { min-height: 0; }
+  .quiz-section { padding: 55px 0; }
+  .quiz-shell h2 { font-size: 31px; }
+  .answer-list { grid-template-columns: 1fr; gap: 8px; }
+  .answer-option { min-height: 54px; }
+  .dashboard-header { padding: 29px 0 33px; }
+  .dashboard-topline { align-items: flex-start; }
+  .dashboard-header h1 { font-size: 37px; }
+  .dashboard-period { padding: 13px 0 0; border-top: 1px solid #435149; border-left: 0; }
+  .kpi-block { min-height: 112px; padding: 13px; }
+  .kpi-value { font-size: 17px; }
+  .chart-panel-large { min-height: 325px; }
+  .chart-bar-wrap, .chart-line-wrap { height: 218px; }
+  .probability-legend { column-gap: 14px; }
+  .dashboard-disclaimer { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
